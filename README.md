@@ -39,7 +39,7 @@ Download and run the installer from [ollama.com/download](https://ollama.com/dow
 
 ---
 
-## Option A — Standalone terminal app
+## Option A — Standalone terminal app (Slower Response)
 
 Install globally so you can run it from any directory:
 
@@ -85,7 +85,7 @@ git-assist [--repo <path>] [--model <tag>]
 
 ---
 
-## Option B — MCP server for AI coding agents
+## Option B — MCP server for AI coding agents (Faster response, will affect usage limits)
 
 This wires `git-assist` into Claude Code (or any MCP-compatible agent) as a set of callable tools. The agent can then query your repo directly — no separate terminal needed.
 
