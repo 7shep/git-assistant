@@ -4,7 +4,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { tools as toolRegistry, byName } from "../tools/index.js";
 
-export const DEFAULT_MODEL = "qwen2.5:7b";
+export const DEFAULT_MODEL = "qwen3:8b";
 export const DEFAULT_HOST = "http://127.0.0.1:11434";
 
 export interface LLMCallbacks {

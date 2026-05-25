@@ -69,7 +69,7 @@ git-assist
 ```
 
 That's it. The first launch downloads the AI model (~4.7 GB, one time only), then the UI starts.
-NOTE: This downloads qwen2.5:7b, if you want to use a different model, you'll have to alter the code.
+NOTE: This downloads qwen3:8b, if you want to use a different model, you'll have to alter the code OR run git-assist --model <modelname> 
 
 ### Options
 
@@ -77,14 +77,14 @@ NOTE: This downloads qwen2.5:7b, if you want to use a different model, you'll ha
 git-assist [--repo <path>] [--model <tag>]
 
   --repo  <path>   Query a different repo (default: current directory)
-  --model <tag>    Use a different Ollama model (default: qwen2.5:7b)
+  --model <tag>    Use a different Ollama model (default: qwen3:8b)
 ```
 
 ### Environment variables
 
 | Variable | Default | Description |
 |---|---|---|
-| `GIT_ASSISTANT_MODEL` | `qwen2.5:7b` | Ollama model tag to use |
+| `GIT_ASSISTANT_MODEL` | `qwen3:8b` | Ollama model tag to use |
 | `OLLAMA_HOST` | `http://127.0.0.1:11434` | Ollama server address |
 
 ### Example questions
@@ -107,11 +107,12 @@ git-assist [--repo <path>] [--model <tag>]
 
 ## Choosing a model
 
-The default model is `qwen2.5:7b` — a strong choice for tool calling at 7B parameters (~4.7 GB). If you want to trade speed for quality, or quality for speed:
+The default model is `qwen3:8b` — a strong choice for tool calling at 7B parameters (~4.7 GB). If you want to trade speed for quality, or quality for speed:
 
 | Model | Size | Notes |
 |---|---|---|
-| `qwen2.5:7b` | 4.7 GB | **Default.** Best tool-calling quality for its size. |
+| `qwen3:8b` | 5.2 GB | **Default.** Newer Qwen generation, strong tool calling. |
+| `qwen3:8b` | 4.7 GB | Previous default. Slightly smaller. |
 | `llama3.1:8b` | 4.9 GB | Meta's model. Solid alternative. |
 | `qwen2.5:14b` | 9 GB | Smarter, but slower on GPUs under 12 GB VRAM. |
 
