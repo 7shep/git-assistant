@@ -1,5 +1,3 @@
-# git-assist
-
 Ask natural language questions about any git repo, answered by a local AI — no API keys, no usage costs, fully offline.
 
 Works two ways: as a **standalone terminal app** you launch yourself, or as an **MCP server** wired into AI coding agents like Claude Code.
