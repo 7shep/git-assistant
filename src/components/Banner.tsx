@@ -18,11 +18,11 @@ export function Banner() {
   return (
     <Box flexDirection="column" marginBottom={1}>
       {ART.split("\n").map((line, i) => (
-        <Text key={i} color="green" bold>
+        <Text key={i} color="magenta" bold>
           {line}
         </Text>
       ))}
-      <Text color="green" dimColor>
+      <Text color="magenta" dimColor>
         {"// by alex"}
       </Text>
     </Box>

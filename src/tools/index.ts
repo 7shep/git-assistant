@@ -1,3 +1,4 @@
+import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import * as status from "./status.js";
 import * as log from "./log.js";
@@ -11,6 +12,8 @@ export interface Tool {
   description: string;
   /** JSON Schema (OpenAI / Ollama compatible) */
   parameters: Record<string, unknown>;
+  /** Raw Zod schema — used by the MCP server for tool registration */
+  inputSchema: z.ZodTypeAny;
   run: (rawInput: unknown, cwd: string) => Promise<string>;
 }
 
@@ -34,6 +37,7 @@ function makeTool(
     name: mod.name,
     description: mod.description,
     parameters: jsonSchema,
+    inputSchema: mod.inputSchema as z.ZodTypeAny,
     run: mod.run,
   };
 }

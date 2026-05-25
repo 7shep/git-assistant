@@ -90,4 +90,8 @@ try {
 
 // 4. Gather repo metadata and launch
 const [rn, br] = await Promise.all([repoName(cwd), currentBranch(cwd)]);
+
+// Clear the terminal so the banner appears at the very top
+process.stdout.write("\x1B[2J\x1B[3J\x1B[H");
+
 render(<App cwd={cwd} repoName={rn} branch={br} model={model} />);
